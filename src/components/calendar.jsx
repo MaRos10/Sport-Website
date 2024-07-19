@@ -4,6 +4,8 @@ import "./calendar.css";
 export default function Calendar() {
   // Store selected date
   const [sDate, setsDate] = useState(new Date());
+  // Games
+  const [games, setGames] = useState([]);
 
   // Find the total days of the current month
   const findMonthDays = (y, m) => {
@@ -32,8 +34,12 @@ export default function Calendar() {
     });
   };
 
-  // Change selected date when user clicks any day
+  // Change selected date when user clicks any day + add game
   const handleDateClick = (date) => {
+    const gameName = prompt("Ange match (format: Lag - Lag)");
+    if (gameName) {
+      setGames([...games, { date: date.toLocaleDateString(), name: gameName }]);
+    }
     setsDate(date);
   };
 
@@ -95,6 +101,13 @@ export default function Calendar() {
         {sDate && (
           <div className="selected-date">
             Valt datum: {sDate.toLocaleDateString()}
+            <ul>
+              {games
+                .filter((game) => game.date === sDate.toLocaleDateString())
+                .map((game, index) => (
+                  <li key={index}>{game.name}</li>
+                ))}
+            </ul>
           </div>
         )}
       </div>
