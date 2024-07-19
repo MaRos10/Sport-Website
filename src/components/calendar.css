@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --blue-color: rgb(69, 91, 130);
+}
+
+.main {
+  font-family: "Roboto", sans-serif;
+  width: 20rem;
+  padding: 0.7rem;
+  margin-left: 1rem;
+  border: 1px solid var(--blue-color);
+}
+
+.header {
+  display: flex;
+  margin-bottom: 0.7rem;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blue-color);
+}
+
+.header button {
+  font-size: 1.2rem;
+  padding: 0.15rem 0.6rem;
+  border: 0.3px solid var(--blue-color);
+  border-radius: 30%;
+  cursor: pointer;
+  color: var(--blue-color);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.box {
+  height: 2rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box.empty {
+  background-color: #e0e0e0;
+  cursor: default;
+}
+
+.selected-date {
+  padding-top: 0.5rem;
+  color: var(--blue-color);
+  font-weight: 400;
+}
+
+.box.selected {
+  background-color: var(--blue-color);
+  color: white;
+}
