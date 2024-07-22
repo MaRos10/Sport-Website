@@ -2,21 +2,21 @@ import { useState } from "react";
 import "./calendar.css";
 
 export default function Calendar() {
-  // Store selected date
+  // State variables for selected date, games, form visibility and form inputs
   const [sDate, setsDate] = useState(new Date());
-
-  // Select date
-  const [isDateSelected, setIsDateSelected] = useState(false);
-
-  // Games
   const [games, setGames] = useState([]);
+  const [isDateSelected, setIsDateSelected] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [team1, setTeam1] = useState("");
+  const [team2, setTeam2] = useState("");
+  const [time, setTime] = useState("");
 
-  // Find the total days of the current month
+  // Find the total days in a given month
   const findMonthDays = (y, m) => {
     return new Date(y, m + 1, 0).getDate();
   };
 
-  // Find the first day of the current month
+  // Find the first day of a given month
   const findFirstDay = (y, m) => {
     return new Date(y, m, 1).getDay();
   };
@@ -38,31 +38,40 @@ export default function Calendar() {
     });
   };
 
-  // Change selected date when user clicks any day + add game
+  // Handle date click and show form
   const handleDateClick = (date) => {
     setsDate(date);
     setIsDateSelected(true);
+    setShowForm(false);
   };
 
-  // Open prompt to add game
-  const addGame = () => {
-    const gameName = prompt("Ange match (format: Lag - Lag)");
-    if (gameName) {
+  // Show the form to add a new game
+  const handleAddGameClick = () => {
+    setShowForm(true);
+  };
+
+  // Add a game
+  const addGame = (e) => {
+    e.preventDefault();
+    if (team1 && team2 && time) {
+      const gameName = `${team1} - ${team2} kl. ${time}`;
       setGames([
         ...games,
         { date: sDate.toLocaleDateString(), name: gameName },
       ]);
+      setTeam1("");
+      setTeam2("");
+      setTime("");
+      setShowForm(false);
     }
   };
 
-  // Remove game
+  // Remove a game
   const removeGame = (index) => {
     setGames(games.filter((_, i) => i !== index));
   };
 
-  // Show calender component
-
-  // What we take from selected date
+  // Generate the calendar days for the current month
   const showCalendar = () => {
     const currDate = new Date();
     const y = sDate.getFullYear();
@@ -73,14 +82,12 @@ export default function Calendar() {
     // Array to store all days
     const allDays = [];
 
-    // For empty cells
+    // Add empty boxes for days before the first day of the month
     for (let p = 0; p < fDay; p++) {
       allDays.push(<div key={`em-${p}`} className="box empty"></div>);
     }
 
-    // Show actual days
-
-    // Iteration equal to the month days to store the days component into allDays array
+    // Add boxes for each day in the current month
     for (let d = 1; d <= mDays; d++) {
       // Create a new date with current d, m, y and push to the array
       const date = new Date(y, m, d);
@@ -104,6 +111,7 @@ export default function Calendar() {
   return (
     <div>
       <div className="main">
+        {/* Header with buttons to change month, and display current month and year */}
         <div className="header">
           <button onClick={changeToPrevMonth}> {"<"} </button>
           <h2>
@@ -114,7 +122,11 @@ export default function Calendar() {
           </h2>
           <button onClick={changeToNextMonth}> {">"} </button>
         </div>
+
+        {/* Calendar body showing all days */}
         <div className="body">{showCalendar()}</div>
+
+        {/* Selected date and games for that date */}
         {sDate && (
           <div className="selected-date">
             Valt datum: {sDate.toLocaleDateString()}
@@ -128,10 +140,48 @@ export default function Calendar() {
                   </li>
                 ))}
             </ul>
-            {isDateSelected && (
-              <button className="addGameBtn" onClick={addGame}>
-                Lägg till match
-              </button>
+            {/* Button to show the form to add a new game */}
+            {!showForm && (
+              <button onClick={handleAddGameClick}>Lägg till match</button>
+            )}
+            {/* Form to add a new game  */}
+            {showForm && (
+              <form onSubmit={addGame}>
+                <div>
+                  <label>
+                    Lag 1:
+                    <input
+                      type="text"
+                      value={team1}
+                      onChange={(e) => setTeam1(e.target.value)}
+                      required
+                    />
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    Lag 2:
+                    <input
+                      type="text"
+                      value={team2}
+                      onChange={(e) => setTeam2(e.target.value)}
+                      required
+                    />
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    Klockslag:
+                    <input
+                      type="time"
+                      value={time}
+                      onChange={(e) => setTime(e.target.value)}
+                      required
+                    />
+                  </label>
+                </div>
+                <button type="submit">OK</button>
+              </form>
             )}
           </div>
         )}
