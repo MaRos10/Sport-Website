@@ -40,15 +40,11 @@ export default function Calendar() {
 
   // Change selected date when user clicks any day + add game
   const handleDateClick = (date) => {
-    /*    const gameName = prompt("Ange match (format: Lag - Lag)");
-    if (gameName) {
-      setGames([...games, { date: date.toLocaleDateString(), name: gameName }]);
-    } */
     setsDate(date);
     setIsDateSelected(true);
   };
 
-  // Open prompt
+  // Open prompt to add game
   const addGame = () => {
     const gameName = prompt("Ange match (format: Lag - Lag)");
     if (gameName) {
@@ -57,6 +53,11 @@ export default function Calendar() {
         { date: sDate.toLocaleDateString(), name: gameName },
       ]);
     }
+  };
+
+  // Remove game
+  const removeGame = (index) => {
+    setGames(games.filter((_, i) => i !== index));
   };
 
   // Show calender component
@@ -121,7 +122,10 @@ export default function Calendar() {
               {games
                 .filter((game) => game.date === sDate.toLocaleDateString())
                 .map((game, index) => (
-                  <li key={index}>{game.name}</li>
+                  <li key={index}>
+                    {game.name}
+                    <button onClick={() => removeGame(index)}>Ta bort</button>
+                  </li>
                 ))}
             </ul>
             {isDateSelected && (
