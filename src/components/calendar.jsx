@@ -4,6 +4,10 @@ import "./calendar.css";
 export default function Calendar() {
   // Store selected date
   const [sDate, setsDate] = useState(new Date());
+
+  // Select date
+  const [isDateSelected, setIsDateSelected] = useState(false);
+
   // Games
   const [games, setGames] = useState([]);
 
@@ -36,11 +40,23 @@ export default function Calendar() {
 
   // Change selected date when user clicks any day + add game
   const handleDateClick = (date) => {
-    const gameName = prompt("Ange match (format: Lag - Lag)");
+    /*    const gameName = prompt("Ange match (format: Lag - Lag)");
     if (gameName) {
       setGames([...games, { date: date.toLocaleDateString(), name: gameName }]);
-    }
+    } */
     setsDate(date);
+    setIsDateSelected(true);
+  };
+
+  // Open prompt
+  const addGame = () => {
+    const gameName = prompt("Ange match (format: Lag - Lag)");
+    if (gameName) {
+      setGames([
+        ...games,
+        { date: sDate.toLocaleDateString(), name: gameName },
+      ]);
+    }
   };
 
   // Show calender component
@@ -108,6 +124,11 @@ export default function Calendar() {
                   <li key={index}>{game.name}</li>
                 ))}
             </ul>
+            {isDateSelected && (
+              <button className="addGameBtn" onClick={addGame}>
+                Lägg till match
+              </button>
+            )}
           </div>
         )}
       </div>
