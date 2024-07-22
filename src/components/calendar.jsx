@@ -136,13 +136,20 @@ export default function Calendar() {
                 .map((game, index) => (
                   <li key={index}>
                     {game.name}
-                    <button onClick={() => removeGame(index)}>Ta bort</button>
+                    <button
+                      className="gameBtn removeBtn"
+                      onClick={() => removeGame(index)}
+                    >
+                      Ta bort
+                    </button>
                   </li>
                 ))}
             </ul>
             {/* Button to show the form to add a new game */}
             {!showForm && (
-              <button onClick={handleAddGameClick}>Lägg till match</button>
+              <button className="gameBtn" onClick={handleAddGameClick}>
+                Lägg till match
+              </button>
             )}
             {/* Form to add a new game  */}
             {showForm && (
@@ -171,7 +178,7 @@ export default function Calendar() {
                 </div>
                 <div>
                   <label>
-                    Klockslag:
+                    Tid:
                     <input
                       type="time"
                       value={time}
@@ -180,7 +187,9 @@ export default function Calendar() {
                     />
                   </label>
                 </div>
-                <button type="submit">OK</button>
+                <button className="gameBtn" type="submit">
+                  OK
+                </button>
               </form>
             )}
           </div>

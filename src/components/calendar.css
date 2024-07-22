@@ -63,4 +63,20 @@
 
 li {
   list-style: none;
+  margin: 0.6rem 0rem;
+  color: rgb(20, 98, 214);
+}
+
+.gameBtn {
+  font-family: "Roboto", sans-serif;
+  color: var(--blue-color);
+  padding: 0.1rem;
+}
+
+.gameBtn.removeBtn {
+  margin-left: 0.5rem;
+}
+
+input {
+  margin: 0.4rem;
 }
