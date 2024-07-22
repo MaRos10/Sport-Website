@@ -60,3 +60,7 @@
   background-color: var(--blue-color);
   color: white;
 }
+
+li {
+  list-style: none;
+}
