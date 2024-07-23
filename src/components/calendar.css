@@ -80,3 +80,19 @@ li {
 input {
   margin: 0.4rem;
 }
+
+/* Date with game gets a dot  */
+.box.has-game {
+  position: relative;
+}
+
+.box.has-game::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+}

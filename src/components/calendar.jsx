@@ -78,6 +78,7 @@ export default function Calendar() {
     const m = sDate.getMonth();
     const mDays = findMonthDays(y, m);
     const fDay = findFirstDay(y, m);
+    const datesWithGames = new Set(games.map((game) => game.date));
 
     // Array to store all days
     const allDays = [];
@@ -89,15 +90,18 @@ export default function Calendar() {
 
     // Add boxes for each day in the current month
     for (let d = 1; d <= mDays; d++) {
-      // Create a new date with current d, m, y and push to the array
       const date = new Date(y, m, d);
+      const dateStr = date.toLocaleDateString();
       const isSelected = sDate && date.toDateString() === sDate.toDateString();
+      const hasGame = datesWithGames.has(dateStr);
 
       allDays.push(
         <div
           key={`d-${d}`}
           // If date is selected, add the selected class name to the day
-          className={`box ${isSelected ? "selected" : ""}`}
+          className={`box ${isSelected ? "selected" : ""} ${
+            hasGame ? "has-game" : ""
+          }`}
           onClick={() => handleDateClick(date)}
         >
           {d}
