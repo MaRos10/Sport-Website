@@ -4,9 +4,8 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <header className="header">
-        <h1>Hemsidans namn</h1>
         <nav>
           <Link to="info" smooth={true} duration={500}>
             Info
@@ -20,9 +19,8 @@ function App() {
         </nav>
       </header>
 
-      <Element name="info" className="section">
-        <h2>Info</h2>
-        <p>Fyll i info</p>
+      <Element name="info" className="section section-main">
+        <h2 className="main-h2">HOVSHAGA IF</h2>
       </Element>
 
       <Element name="calendar" className="section">
