@@ -116,7 +116,7 @@ export default function Calendar() {
     <div>
       <div className="main">
         {/* Header with buttons to change month, and display current month and year */}
-        <div className="calendarHeader">
+        <div className="calendar-header">
           <button onClick={changeToPrevMonth}> {"<"} </button>
           <h2>
             {sDate.toLocaleString("default", {
@@ -141,7 +141,7 @@ export default function Calendar() {
                   <li key={index}>
                     {game.name}
                     <button
-                      className="gameBtn removeBtn"
+                      className="game-btn remove-btn"
                       onClick={() => removeGame(index)}
                     >
                       Ta bort
@@ -151,7 +151,7 @@ export default function Calendar() {
             </ul>
             {/* Button to show the form to add a new game */}
             {!showForm && (
-              <button className="gameBtn" onClick={handleAddGameClick}>
+              <button className="game-btn" onClick={handleAddGameClick}>
                 Lägg till match
               </button>
             )}
@@ -191,7 +191,7 @@ export default function Calendar() {
                     />
                   </label>
                 </div>
-                <button className="gameBtn" type="submit">
+                <button className="game-btn" type="submit">
                   OK
                 </button>
               </form>

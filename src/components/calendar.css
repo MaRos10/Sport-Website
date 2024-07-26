@@ -13,7 +13,7 @@
   border-radius: 10px;
 }
 
-.calendarHeader {
+.calendar-header {
   display: flex;
   margin-bottom: 0.7rem;
   justify-content: space-between;
@@ -68,13 +68,13 @@ li {
   color: rgb(20, 98, 214);
 }
 
-.gameBtn {
+.game-btn {
   font-family: "Roboto", sans-serif;
   color: var(--blue-color);
   padding: 0.1rem;
 }
 
-.gameBtn.removeBtn {
+.game-btn.remove-btn {
   margin-left: 0.5rem;
 }
 
