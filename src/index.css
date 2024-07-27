@@ -28,18 +28,25 @@ body {
   width: 100%;
 }
 
-/* Nav */
+/* Nav + header */
+
 .header {
-  background-color: var(--blue-color);
+  border-bottom: 1px dotted rgb(201, 215, 221);
   padding: 1rem;
   color: white;
   text-align: center;
   width: 100vw;
 }
 
+.header nav {
+  display: flex;
+  justify-content: center;
+}
+
 .header nav a {
-  color: white;
+  color: var(--blue-color);
   margin: 0 1rem;
+  padding: 0rem 1.2rem;
   cursor: pointer;
   text-decoration: none;
 }
@@ -71,4 +78,12 @@ body {
   font-family: "Tomorrow", sans-serif;
   font-size: 4rem;
   letter-spacing: 0.3rem;
+}
+
+/* Mediaqueries */
+
+@media screen and (max-width: 768px) {
+  .main-h2 {
+    font-size: 2.7rem;
+  }
 }
