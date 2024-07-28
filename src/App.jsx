@@ -31,6 +31,13 @@ function App() {
         <h2>Kontakt</h2>
         <p>Kontaktinformation....</p>
       </Element>
+
+      <div className="footer-container">
+        <div className="footer">
+          <div className="links">Länkar</div>
+          <div className="socials">Sociala medier</div>
+        </div>
+      </div>
     </div>
   );
 }
