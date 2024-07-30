@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  max-width: 100%;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
@@ -60,9 +61,10 @@ body {
   color: var(--blue-color);
 }
 
-.section h2 {
+.section-h2 {
   margin-top: 0;
   text-align: center;
+  padding: 3rem;
 }
 
 /* Body - section main */
@@ -111,6 +113,11 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.socials-img {
+  height: 35px;
+  width: 35px;
 }
 
 /* Mediaqueries */

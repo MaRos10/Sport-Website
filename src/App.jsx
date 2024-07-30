@@ -23,12 +23,12 @@ function App() {
       </Element>
 
       <Element name="calendar" className="section">
-        <h2>Matchkalender</h2>
+        <h2 className="section-h2">Matchkalender</h2>
         <Calendar />
       </Element>
 
       <Element name="contact" className="section">
-        <h2>Kontakt</h2>
+        <h2 className="section-h2">Kontakt</h2>
         <div className="contact-container">
           <div>
             <img src="src/assets/trainer.jpeg" alt="trainer" />
@@ -42,7 +42,31 @@ function App() {
       <div className="footer-container">
         <div className="footer">
           <div className="links">Länkar</div>
-          <div className="socials">Sociala medier</div>
+          <div className="socials">
+            Sociala medier
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="socials-img"
+                src="src/assets/icons8-facebook (1).svg"
+                alt="Facebook link"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="socials-img"
+                src="src/assets/icons8-instagram (1).svg"
+                alt="Instagram link"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

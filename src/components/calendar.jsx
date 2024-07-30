@@ -118,7 +118,7 @@ export default function Calendar() {
         {/* Header with buttons to change month, and display current month and year */}
         <div className="calendar-header">
           <button onClick={changeToPrevMonth}> {"<"} </button>
-          <h2>
+          <h2 className="month">
             {sDate.toLocaleString("default", {
               month: "long",
               year: "numeric",
