@@ -29,7 +29,14 @@ function App() {
 
       <Element name="contact" className="section">
         <h2>Kontakt</h2>
-        <p>Kontaktinformation....</p>
+        <div className="contact-container">
+          <div>
+            <img src="src/assets/trainer.jpeg" alt="trainer" />
+          </div>
+          <div className="contact-text">
+            För kontakt, skriv till Per Persson
+          </div>
+        </div>
       </Element>
 
       <div className="footer-container">
