@@ -33,7 +33,6 @@ body {
 /* Nav + header */
 
 .header {
-  /* border-bottom: 1px dotted rgb(201, 215, 221); */
   padding: 1rem;
   color: white;
   text-align: center;
@@ -82,6 +81,7 @@ body {
   background-image: url(./assets/pexels-markusspiske-114296.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .main-h2 {
@@ -93,18 +93,48 @@ body {
 }
 
 /* Contact */
-.contact-container {
+.map-container {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   gap: 5rem;
 }
 
-img {
-  height: 15rem;
-  width: 15rem;
-  border-radius: 30px;
+.map-text {
+  width: 50%;
+}
+
+iframe {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+}
+
+.text-container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin: 1rem 0rem;
+}
+
+.description,
+.address,
+.directions,
+.transport {
+  margin-bottom: 20px;
+}
+
+.transport h4 {
+  margin-bottom: 5px;
 }
 
 /* Footer */
@@ -119,13 +149,34 @@ img {
 
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 2rem 10rem;
   align-items: center;
+}
+
+.links,
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.socials {
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  cursor: pointer;
 }
 
 .socials-img {
   height: 2.5rem;
   width: 2.5rem;
+  cursor: pointer;
 }
 
 /* Mediaqueries */
@@ -137,5 +188,14 @@ img {
 
   .contact-container {
     gap: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 0rem;
+  }
+
+  .links {
+    align-items: center;
   }
 }
