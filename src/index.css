@@ -33,7 +33,7 @@ body {
 /* Nav + header */
 
 .header {
-  border-bottom: 1px dotted rgb(201, 215, 221);
+  /* border-bottom: 1px dotted rgb(201, 215, 221); */
   padding: 1rem;
   color: white;
   text-align: center;
@@ -51,6 +51,12 @@ body {
   padding: 0rem 1.2rem;
   cursor: pointer;
   text-decoration: none;
+  transition: transform 0.3s, font-weight 0.3s;
+}
+
+.header nav a:hover {
+  transform: scale(1.1);
+  font-weight: bold;
 }
 
 /* Body */
@@ -65,6 +71,8 @@ body {
   margin-top: 0;
   text-align: center;
   padding: 3rem;
+  font-size: 2.8rem;
+  font-weight: 400;
 }
 
 /* Body - section main */
@@ -116,8 +124,8 @@ img {
 }
 
 .socials-img {
-  height: 35px;
-  width: 35px;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 /* Mediaqueries */
