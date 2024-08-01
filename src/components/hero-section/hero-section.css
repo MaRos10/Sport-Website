@@ -11,7 +11,7 @@
 }
 
 .header nav a {
-  color: var(--blue-color);
+  color: rgba(221, 217, 217, 0.979);
   margin: 0 1rem;
   padding: 0rem 1.2rem;
   cursor: pointer;
@@ -27,7 +27,8 @@
 
 .section.section-main {
   width: 100vw;
-  background-image: url(src/assets/pexels-markusspiske-114296.jpg);
+  /* background-image: url(src/assets/pexels-markusspiske-114296.jpg); */
+  background-image: url(src/assets/pexels-quang-nguyen-vinh-222549-2143453.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -39,4 +40,6 @@
   font-family: "Tomorrow", sans-serif;
   font-size: 4rem;
   letter-spacing: 0.3rem;
+  /* color: rgba(10, 53, 122, 0.705); */
+  color: rgba(221, 217, 217, 0.979);
 }
