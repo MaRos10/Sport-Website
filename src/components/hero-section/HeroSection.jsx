@@ -1,8 +1,8 @@
 import { Link, Element } from "react-scroll";
 import "./hero-section.css";
 
-export default HeroSection = () => (
-  <Element name="hero" className="section section-main">
+const HeroSection = () => (
+  <Element name="info" className="section section-main">
     <header className="header">
       <nav>
         <Link to="info" smooth={true} duration={500}>
@@ -19,3 +19,5 @@ export default HeroSection = () => (
     <h2 className="main-h2">HOVSHAGA IF</h2>
   </Element>
 );
+
+export default HeroSection;

@@ -1,8 +1,8 @@
 import { Element } from "react-scroll";
 import "./map-section.css";
 
-export default MapSection = () => (
-  <Element name="map" className="section">
+const MapSection = () => (
+  <Element name="contact" className="section">
     <h2 className="section-h2">Hitta till vår arena</h2>
     <div className="map-container">
       <iframe
@@ -53,3 +53,5 @@ export default MapSection = () => (
     </div>
   </Element>
 );
+
+export default MapSection;
