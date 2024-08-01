@@ -83,13 +83,13 @@ function App() {
         <div className="footer">
           <div className="links">
             <Link to="info" smooth={true} duration={500}>
-              HEM
+              Hem
             </Link>
             <Link to="calendar" smooth={true} duration={500}>
-              KALENDER
+              Kalender
             </Link>
             <Link to="contact" smooth={true} duration={500}>
-              HITTA HIT
+              Hitta hit
             </Link>
           </div>
           <div className="socials">
