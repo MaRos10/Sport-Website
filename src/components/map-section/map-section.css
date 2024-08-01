@@ -1,0 +1,39 @@
+.map-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+iframe {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+}
+
+.text-container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin: 1rem 0rem;
+}
+
+.description,
+.address,
+.directions,
+.transport {
+  margin-bottom: 20px;
+}
+
+.transport h4 {
+  margin-bottom: 5px;
+}

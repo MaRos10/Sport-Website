@@ -1,0 +1,42 @@
+.header {
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  width: 100vw;
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+}
+
+.header nav a {
+  color: var(--blue-color);
+  margin: 0 1rem;
+  padding: 0rem 1.2rem;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  transition: transform 0.3s, font-weight 0.3s;
+}
+
+.header nav a:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+.section.section-main {
+  width: 100vw;
+  background-image: url(src/assets/pexels-markusspiske-114296.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-h2 {
+  text-align: center;
+  padding-top: 5rem;
+  font-family: "Tomorrow", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+}

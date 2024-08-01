@@ -1,0 +1,40 @@
+.footer-container {
+  background-color: var(--blue-color);
+  width: 100vw;
+  margin-top: auto;
+  height: 10rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  align-items: center;
+}
+
+.links,
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.socials {
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.footer a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.socials-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
