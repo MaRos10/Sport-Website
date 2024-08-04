@@ -41,6 +41,12 @@ body {
   font-weight: 400;
 }
 
+.calendar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 /* Mediaqueries */
 
 @media screen and (max-width: 768px) {
