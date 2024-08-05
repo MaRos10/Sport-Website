@@ -1,0 +1,34 @@
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.about-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 20rem;
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.readmore {
+  padding: 4.7rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgb(245, 244, 244);
+  background-color: var(--blue-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.readmore:hover {
+  background-color: rgb(61, 82, 118);
+}
