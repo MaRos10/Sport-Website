@@ -6,6 +6,7 @@ import MapSection from "./components/map-section/MapSection";
 import Footer from "./components/footer/Footer";
 import CustomCarousel from "./components/carousel/Carousel";
 import AboutSection from "./components/about-section/AboutSection";
+import ScrollText from "./components/scroll-text/ScrollText";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         </div>
       </Element>
       <MapSection />
+      <ScrollText />
       <Footer />
     </div>
   );
