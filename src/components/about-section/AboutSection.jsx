@@ -3,7 +3,6 @@ import "./about-section.css";
 
 const AboutSection = () => (
   <Element name="about" className="section">
-    <h2 className="section-h2">Om oss</h2>
     <div className="about-container">
       <div className="about-box">
         <img
@@ -22,11 +21,6 @@ const AboutSection = () => (
         </p>
       </div>
       <div className="about-box">
-        {/*   <img
-          src="src/assets/pexels-quang-nguyen-vinh-222549-2143453.jpg"
-          alt=""
-          className="about-img"
-        /> */}
         <button className="readmore">Läs mer</button>
       </div>
     </div>
