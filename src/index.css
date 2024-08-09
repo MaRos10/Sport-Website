@@ -54,7 +54,7 @@ body {
 /* Mediaqueries */
 
 @media screen and (max-width: 768px) {
-  /* InfoSection */
+  /* HeroSection */
   .main-h2 {
     font-size: 2.7rem;
   }
