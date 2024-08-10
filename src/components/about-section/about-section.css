@@ -33,3 +33,31 @@
 .readmore:hover {
   background-color: rgb(61, 82, 118);
 }
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .about-box {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .about-img {
+    width: 80%;
+    max-width: 15rem;
+  }
+
+  .about-text {
+    padding: 1rem;
+  }
+
+  .readmore {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

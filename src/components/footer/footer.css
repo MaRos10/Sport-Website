@@ -38,3 +38,14 @@
   width: 2.5rem;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 0rem;
+  }
+
+  .links {
+    align-items: center;
+  }
+}

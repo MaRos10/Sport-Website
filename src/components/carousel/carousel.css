@@ -22,3 +22,14 @@
   height: auto;
   flex-shrink: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .custom-carousel {
+    max-width: 100%;
+  }
+
+  .carousel-slide img {
+    height: 12.5rem;
+    object-fit: cover;
+  }
+}

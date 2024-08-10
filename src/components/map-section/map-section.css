@@ -37,3 +37,29 @@ iframe {
 .transport h4 {
   margin-bottom: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  .map-container {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  iframe {
+    height: 40vh;
+  }
+
+  .text-container {
+    max-width: 100%;
+
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .section-title {
+    padding: 0.5rem 0rem;
+  }
+
+  .title {
+    display: none;
+  }
+}

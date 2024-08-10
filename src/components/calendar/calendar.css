@@ -102,3 +102,10 @@ input {
   background-color: var(--blue-color);
   border-radius: 50%;
 }
+
+@media screen and (max-width: 768px) {
+  .selected-date,
+  li {
+    font-size: 0.9rem;
+  }
+}
