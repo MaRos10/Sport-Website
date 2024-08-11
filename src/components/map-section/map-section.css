@@ -7,7 +7,7 @@
 
 iframe {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 22px;
+  border-radius: 20px;
 }
 
 .text-container {
@@ -15,7 +15,7 @@ iframe {
   margin: 0 auto;
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 22px;
+  border-radius: 20px;
 }
 
 .title {
