@@ -21,10 +21,18 @@ iframe {
 .title {
   text-align: center;
   margin-bottom: 20px;
+  font-weight: 300;
 }
 
 .section-title {
   margin: 1rem 0rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.transport-option {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 .description,

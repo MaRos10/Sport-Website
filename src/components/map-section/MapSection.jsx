@@ -31,7 +31,7 @@ const MapSection = () => (
         <div className="directions">
           <h3 className="section-title">Vägbeskrivning</h3>
           <div className="transport">
-            <h4>Med bil</h4>
+            <h4 className="transport-option">Med bil</h4>
             <p>
               Ta E4:an norrut och svänger av vid avfart 83 mot Hovshaga. Följ
               skyltarna mot Hovshaga och sväng höger in på Hovshaga Allé. Efter
@@ -40,7 +40,7 @@ const MapSection = () => (
             </p>
           </div>
           <div className="transport">
-            <h4>Med kollektivtrafik</h4>
+            <h4 className="transport-option">Med kollektivtrafik</h4>
             <p>
               Ta buss nummer 5 från Växjö centralstation mot Hovshaga. Stig av
               vid hållplatsen <i>Hovshaga Torg</i>. Därifrån är det en kort
