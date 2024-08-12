@@ -49,7 +49,7 @@ iframe {
 @media screen and (max-width: 768px) {
   .map-container {
     flex-direction: column-reverse;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   iframe {
