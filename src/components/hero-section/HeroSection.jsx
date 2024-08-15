@@ -16,7 +16,7 @@ const HeroSection = () => (
         </Link>
       </nav>
     </header>
-    <h2 className="main-h2">HOVSHAGA IF</h2>
+    <h2 className="main-h2">VÄSTRA IF</h2>
   </Element>
 );
 

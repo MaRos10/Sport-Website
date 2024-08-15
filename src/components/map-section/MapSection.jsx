@@ -23,8 +23,8 @@ const MapSection = () => (
         <div className="adress">
           <h3 className="section-title">Adress</h3>
           <p>
-            Hovshaga IF Arena <br />
-            Hovshagavägen 111 <br />
+            Västra IF Arena <br />
+            Västravägen 111 <br />
             Växjö
           </p>
         </div>
@@ -33,19 +33,19 @@ const MapSection = () => (
           <div className="transport">
             <h4 className="transport-option">Med bil</h4>
             <p>
-              Ta E4:an norrut och svänger av vid avfart 83 mot Hovshaga. Följ
-              skyltarna mot Hovshaga och sväng höger in på Hovshaga Allé. Efter
-              cirka 2 kilometer svänger du vänster in på Hovshaga IF Arena. Det
+              Ta E4:an norrut och svänger av vid avfart 83 mot Västra. Följ
+              skyltarna mot Västra och sväng höger in på Västra Allé. Efter
+              cirka 2 kilometer svänger du vänster in på Västra IF Arena. Det
               finns gott om parkeringsplatser direkt vid arenan.
             </p>
           </div>
           <div className="transport">
             <h4 className="transport-option">Med kollektivtrafik</h4>
             <p>
-              Ta buss nummer 5 från Växjö centralstation mot Hovshaga. Stig av
-              vid hållplatsen <i>Hovshaga Torg</i>. Därifrån är det en kort
-              promenad på cirka 10 minuter till arenan. Följ Hovshaga Allé
-              norrut och du kommer att se arenan på vänster sida.
+              Ta buss nummer 5 från Växjö centralstation mot Västra. Stig av vid
+              hållplatsen <i>Västra Torg</i>. Därifrån är det en kort promenad
+              på cirka 10 minuter till arenan. Följ Västra Allé norrut och du
+              kommer att se arenan på vänster sida.
             </p>
           </div>
         </div>
