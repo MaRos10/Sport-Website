@@ -1,15 +1,12 @@
 import { Element } from "react-scroll";
 import "./about-section.css";
+import dragonImage from "../../assets/dragon-2646934_1280.png";
 
 const AboutSection = () => (
   <Element name="about" className="section">
     <div className="about-container">
       <div className="about-box">
-        <img
-          src="src/assets/dragon-2646934_1280.png"
-          alt="Emblem"
-          className="about-img"
-        />
+        <img src={dragonImage} alt="Emblem" className="about-img" />
       </div>
       <div className="about-box">
         <p className="about-text">Den lilla klubben med det stora hjärtat</p>
