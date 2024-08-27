@@ -1,5 +1,8 @@
 import { Link } from "react-scroll";
 import "./footer.css";
+import facebookIcon from "../../assets/icons8-facebook (1).svg";
+import instagramIcon from "../../assets/icons8-instagram (1).svg";
+import twitterIcon from "../../assets/icons8-twitter.svg";
 
 const Footer = () => (
   <div className="footer-container">
@@ -21,11 +24,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            className="socials-img"
-            src="src/assets/icons8-facebook (1).svg"
-            alt="Facebook link"
-          />
+          <img className="socials-img" src={facebookIcon} alt="Facebook link" />
         </a>
         <a
           href="https://www.instagram.com"
@@ -34,7 +33,7 @@ const Footer = () => (
         >
           <img
             className="socials-img"
-            src="src/assets/icons8-instagram (1).svg"
+            src={instagramIcon}
             alt="Instagram link"
           />
         </a>
@@ -43,11 +42,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            className="socials-img"
-            src="src/assets/icons8-twitter.svg"
-            alt="Twitter link"
-          />
+          <img className="socials-img" src={twitterIcon} alt="Twitter link" />
         </a>
       </div>
     </div>

@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./carousel.css";
+import carouselImage1 from "../../assets/carousel/pexels-bohlemedia-1884576.jpg";
+import carouselImage2 from "../../assets/carousel/pexels-influencer-3006119.jpg";
+import carouselImage3 from "../../assets/carousel/pexels-aleksandar069-3651674.jpg";
+import carouselImage4 from "../../assets/carousel/pexels-rethaferguson-3886241.jpg";
+import carouselImage5 from "../../assets/carousel/pexels-maumascaro-395082.jpg";
 
 const images = [
-  "src/assets/carousel/pexels-bohlemedia-1884576.jpg",
-  "src/assets/carousel/pexels-influencer-3006119.jpg",
-  "src/assets/carousel/pexels-aleksandar069-3651674.jpg",
-  "src/assets/carousel/pexels-rethaferguson-3886241.jpg",
-  "src/assets/carousel/pexels-maumascaro-395082.jpg",
+  carouselImage1,
+  carouselImage2,
+  carouselImage3,
+  carouselImage4,
+  carouselImage5,
 ];
 
 const CustomCarousel = () => {

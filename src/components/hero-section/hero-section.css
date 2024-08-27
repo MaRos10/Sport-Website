@@ -27,7 +27,7 @@
 
 .section.section-main {
   width: 100vw;
-  background-image: url(src/assets/soccer-1678992_1280.jpg);
+  background-image: var(--soccer-image);
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
