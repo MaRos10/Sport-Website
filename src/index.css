@@ -33,7 +33,7 @@ body {
 
 .section {
   padding: 1.5rem;
-  min-height: 100vh;
+  min-height: 65vh;
   color: var(--blue-color);
 }
 
@@ -61,6 +61,10 @@ body {
 
   .calendar {
     margin-bottom: 4rem;
+  }
+
+  .section {
+    min-height: 75vh;
   }
 
   .section-h2 {
